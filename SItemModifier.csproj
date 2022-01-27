@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<OutputType>Library</OutputType>
+		<LangVersion>preview</LangVersion>
+		<TargetFrameworks>net472</TargetFrameworks>
+		<AssemblyName>SItemModifier</AssemblyName>
+		<RootNamespace>SItemModifier</RootNamespace>
+		<NoWarn>$(NoWarn);NU1701;NU1702;CS0436</NoWarn>
+		<RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+	</PropertyGroup>
+	
+	<ItemGroup>
+		<PackageReference Include="Legacy2CPSWorkaround" Version="1.0.0">
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+			<PrivateAssets>all</PrivateAssets>
+		</PackageReference>
+		<PackageReference Include="Lib.Harmony" Version="2.2.0" />
+		
+		<PackageReference Include="RocketMod.Modern.Dependencies" Version="1.*-*" />
+		<PackageReference Include="RocketMod.Modern.Generator" Version="1.*-*">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+</Project>
